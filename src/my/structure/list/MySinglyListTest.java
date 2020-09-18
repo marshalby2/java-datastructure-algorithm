@@ -5,19 +5,20 @@ package my.structure.list;
  * @Author marshal
  * @Date 16/9/20 10:28 PM
  */
-public class MySingleListTest {
+public class MySinglyListTest {
     public static void main(String[] args) {
-        MySingleList list = new MySingleList();
+        MySinglyList list = new MySinglyList();
         list.add(1);
         list.add(2);
         list.add(3);
 
         list.print();
         System.out.println("===========reverse============");
+        System.out.println(list.reverse());
 //        list.reverseList(list.reverse());
-        list.removeByIndex(1);
-        System.out.println(list.size());
-        list.print();
+//        list.removeByIndex(1);
+//        System.out.println(list.size());
+//        list.print();
 
     }
 }

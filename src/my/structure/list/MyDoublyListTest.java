@@ -18,6 +18,8 @@ public class MyDoublyListTest {
         System.out.println(list.get(1));
         System.out.println(list.get(2));
 //        System.out.println(list.getLast());
+        System.out.println("remove: " + list.remove(0));
+        System.out.println(list.get(0));
 
     }
 }

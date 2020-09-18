@@ -5,7 +5,7 @@ package my.structure.list;
  * @Author marshal
  * @Date 16/9/20 10:14 PM
  */
-public class MySingleList {
+public class MySinglyList {
 
     private int size = 0;
 
@@ -136,10 +136,9 @@ public class MySingleList {
     }
 
     /**
-     * 反转链表
-     * head(null,address1)
-     * node(1,address2)
-     * node(1,address3)
+     *  反转链表,返回反转后的头指针
+     *
+     * @return
      */
     public Node reverse() {
         if (size() == 0) {
@@ -151,9 +150,9 @@ public class MySingleList {
 
         while (current != null) {
             temp = current.next;
-            current.next = pre; // 指向上一个节点
-            pre = current;  // pre向后移动
-            current = temp; // 查找下一个节点
+            current.next = pre; // 反转
+            pre = current;  // 指向当前节点
+            current = temp; // 指向后一个节点
         }
         head.next = null;
         return pre;
