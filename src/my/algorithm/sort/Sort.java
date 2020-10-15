@@ -3,7 +3,7 @@ package my.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * @Description TODO
+ * @Description 排序算法总结, 参考<a>https://www.runoob.com/w3cnote/merge-sort.html</a>
  * @Author marshal
  * @Date 18/9/20 11:17 AM
  */
@@ -54,7 +54,7 @@ public class Sort {
      * 插入排序
      * <p>
      * 原理:
-     * 将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。
+     * 将第一排排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。
      * 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。
      * <p>
      *
@@ -117,6 +117,51 @@ public class Sort {
         }
         return array;
     }
+
+    /**
+     * 归并排序
+     *
+     *
+     * @param sourceArray
+     * @return
+     */
+    public static int[] mereSort(int[] sourceArray) {
+        int[] array = Arrays.copyOf(sourceArray, sourceArray.length);
+        var n = array.length;
+        if (n < 2) {
+            return array;
+        }
+        int middle = n / 2;
+        int[] left = Arrays.copyOfRange(array, 0, middle);
+        int[] right = Arrays.copyOfRange(array, middle, n);
+
+        return merge(mereSort(left), mereSort(right));
+    }
+
+    private static int[] merge(int[] left, int[] right) {
+        int[] result = new int[left.length + right.length];
+        int i = 0;
+        while (left.length > 0 && right.length > 0) {
+            if (left[0] <= right[0]) {
+                result[i++] = left[0];
+                left = Arrays.copyOfRange(left, 1, left.length);
+            } else {
+                result[i++] = right[0];
+                right = Arrays.copyOfRange(right, 1, right.length);
+            }
+        }
+        while (left.length > 0) {
+            result[i++] = left[0];
+            left = Arrays.copyOfRange(left, 1, left.length);
+        }
+        while (right.length > 0) {
+            result[i++] = right[0];
+            right = Arrays.copyOfRange(right, 1, right.length);
+        }
+
+        return result;
+    }
+
 
     public static int[] model(int[] array) {
         var n = array.length;

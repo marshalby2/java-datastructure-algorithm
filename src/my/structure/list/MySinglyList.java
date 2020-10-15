@@ -158,7 +158,7 @@ public class MySinglyList {
         return pre;
     }
 
-    public void reverseList(Node node) {
+    public void printReverseList(Node node) {
         Node temp = node;
         while (temp.next != null) {
             System.out.println(temp.data);

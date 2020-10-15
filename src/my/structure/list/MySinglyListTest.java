@@ -14,8 +14,8 @@ public class MySinglyListTest {
 
         list.print();
         System.out.println("===========reverse============");
-        System.out.println(list.reverse());
-//        list.reverseList(list.reverse());
+//        System.out.println(list.reverse());
+        list.printReverseList(list.reverse());
 //        list.removeByIndex(1);
 //        System.out.println(list.size());
 //        list.print();
