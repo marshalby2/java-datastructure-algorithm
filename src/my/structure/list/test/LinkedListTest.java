@@ -1,4 +1,4 @@
-package my.structure.list;
+package my.structure.list.test;
 
 import java.util.LinkedList;
 

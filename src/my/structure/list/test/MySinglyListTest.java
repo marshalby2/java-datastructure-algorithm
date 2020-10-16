@@ -1,4 +1,6 @@
-package my.structure.list;
+package my.structure.list.test;
+
+import my.structure.list.impl.MySinglyList;
 
 /**
  * @Description TODO

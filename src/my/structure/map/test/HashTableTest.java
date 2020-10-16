@@ -1,4 +1,4 @@
-package my.structure.map;
+package my.structure.map.test;
 
 import java.util.Hashtable;
 

@@ -1,4 +1,4 @@
-package my.structure.list;
+package my.structure.list.test;
 
 import java.util.ArrayList;
 
@@ -10,9 +10,9 @@ import java.util.ArrayList;
 public class ArrayListTest {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        list.add("pencil");
-        list.add("book");
-        list.add("paper");
-
+//        list.add("pencil");
+//        list.add("book");
+//        list.add("paper");
+        System.out.println(list.size());
     }
 }

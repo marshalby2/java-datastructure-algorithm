@@ -60,7 +60,7 @@ public class BinarySearchTree {
 
         Node p = tree;
         while (p != null) {
-            if (data > p.data) { // 插入右边
+            if (data >= p.data) { // 插入右边
                 if (p.right == null) { // 右节点为空
                     p.right = new Node(data);
                 } else {
@@ -132,9 +132,10 @@ public class BinarySearchTree {
      *
      * @return
      */
-    public Node getMaxNode() {
+    public Node findMax() {
+        if (tree == null) return null;
         Node p = tree;
-        while (p != null) {
+        while (p.right != null) {
             p = p.right;
         }
         return p;
@@ -145,9 +146,10 @@ public class BinarySearchTree {
      *
      * @return
      */
-    public Node getMinNode() {
+    public Node findMin() {
+        if (tree == null) return null;
         Node p = tree;
-        while (p != null) {
+        while (p.left != null) {
             p = p.left;
         }
         return p;
