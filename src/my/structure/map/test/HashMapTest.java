@@ -19,6 +19,8 @@ public class HashMapTest {
         map.put(6, "six");
         map.put(7, "seven");
         map.put(8, "eight");
+//        map.put(8, "ba");
 //        map.put(9, "nine");
+        System.out.println(map);
     }
 }
